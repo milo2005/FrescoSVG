@@ -9,7 +9,8 @@ import java.io.InputStream
 object SvgUtil {
 
     fun addSVG(inputStream: InputStream?, img: ImageView, with: Float = 200f, height: Float = 200f) {
-        val svg = SVG.getFromAsset(img.context.assets, "egg.svg")
+
+        val svg =SVG.getFromInputStream(inputStream)
         svg.documentHeight = with
         svg.documentWidth = height
 
